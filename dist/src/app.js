@@ -9,7 +9,7 @@ const fastify = (0, fastify_1.default)({
 });
 // Declare a route
 fastify.get('/', async function handler() {
-    return { hello: 'world' };
+    return { hello: 'こんにちは' };
 });
 // Run the server!
 async function main() {

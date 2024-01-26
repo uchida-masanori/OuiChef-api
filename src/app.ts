@@ -5,7 +5,7 @@ const fastify = Fastify({
 
 // Declare a route
 fastify.get('/', async function handler () {
-  return { hello: 'world' }
+  return { hello: 'こんにちは' }
 })
 
 // Run the server!
