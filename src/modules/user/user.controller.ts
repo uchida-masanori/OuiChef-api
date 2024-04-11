@@ -2,7 +2,6 @@
 // import { FastifyReply, FastifyRequest } from "fastify";
 // import { CreateEmailUserInput } from "./user.schema";
 
-
 // // SupabaseのURLとアプリケーションの公開キーを使用してクライアントを初期化
 // // TODO: 秘匿化する
 // const supabase = createClient('https://uaalfxnunnkytcjxtlts.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InVhYWxmeG51bm5reXRjanh0bHRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDYyNTg5MzksImV4cCI6MjAyMTgzNDkzOX0.lRdxvBytULaa2UmC8KaPQ1Nk4pe5n1mOJb6Unz9qK_A');

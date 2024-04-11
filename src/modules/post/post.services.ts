@@ -1,11 +1,11 @@
 import prisma from "../../util/prisma";
 
-export async function findPosts(){
-  try{
+export async function findPosts() {
+  try {
     const posts = await prisma.posts.findMany();
-    if(posts.length === 0) throw new Error("No posts found");
-     // BigIntを文字列に変換する処理を追加
-    const serializedPosts = posts.map(post => ({
+    if (posts.length === 0) throw new Error("No posts found");
+    // BigIntを文字列に変換する処理を追加
+    const serializedPosts = posts.map((post) => ({
       ...post,
       // 仮にidがBigInt型の場合、ここで文字列に変換
       id: post.id.toString(),
@@ -13,7 +13,7 @@ export async function findPosts(){
     }));
 
     return serializedPosts;
-  } catch(err){
+  } catch (err) {
     console.error(err);
   }
 }
