@@ -6,21 +6,29 @@
   "scripts": {
     "clean": "rm -rf node_modules/.cache",
     "dev": "tsnd --respawn --transpile-only --exit-child src/app.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint-fix": "eslint --cache --fix src/ && prettier --write src/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.11.6",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
-    "prettier": "^3.2.4",
-    "prisma": "^5.8.1",
+    "prettier": "^3.2.5",
+    "prisma": "^5.9.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "fastify": "^4.25.2"
+    "@prisma/client": "^5.8.1",
+    "@supabase/supabase-js": "^2.39.6",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.25.2",
+    "fastify-zod": "^1.4.0",
+    "zod": "^3.22.4"
   }
 }

@@ -1,19 +1,12 @@
-import Fastify from 'fastify'
-const fastify = Fastify({
-  logger: true
-})
+import buildServer from "./server";
 
-// Declare a route
-fastify.get('/', async function handler () {
-  return { hello: 'こんにちは' }
-})
+const server =  buildServer();
 
-// Run the server!
 async function main(){
 try {
-  await fastify.listen({ port: 3000 })
+  await (await server).listen({ port: 3000 })
 } catch (err) {
-  fastify.log.error(err)
+  console.log(err)
   process.exit(1)
 }
 }

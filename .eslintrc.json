@@ -1,11 +1,12 @@
-module.exports = {
+{
     "env": {
-        "es2021": true,
+        "es2022": true,
         "node": true
     },
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/recommended",
+        "prettier"
     ],
     "overrides": [
     ],
@@ -18,5 +19,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
+        // "@typescript-eslint/no-explicit-any": 1,
+        // "@typescript-eslint/no-non-null-assertion": 1
     }
 }
