@@ -5,6 +5,7 @@ const addPostSchema = z.object({
   content: z.string().max(140),
   images: z.array(z.string().url()),
   uuid: z.string().uuid(),
+  id: z.number(),
 });
 
 export type postInput = z.infer<typeof addPostSchema>;
